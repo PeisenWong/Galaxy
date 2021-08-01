@@ -319,7 +319,7 @@ class MainWidget(RelativeLayout):
                 self.current_offset_y -= spacing_y
                 self.current_y_loop += 1
                 self.generate_tiles_coordinate()
-                print("loop: " + str(self.current_y_loop))
+                # print("loop: " + str(self.current_y_loop))
                 self.score_text = "SCORE: " + str(self.current_y_loop)
 
             speed_x = self.current_space_x * self.height
@@ -333,7 +333,7 @@ class MainWidget(RelativeLayout):
             self.sound_music1.stop()
             self.sound_gameover_impact.play()
             Clock.schedule_once(self.game_over_sound, 1)  # Delay the game over for 1 second
-            print("GAME OVER")
+            # print("GAME OVER")
 
     def game_over_sound(self, dt):
         if self.game_over_state:
@@ -346,7 +346,7 @@ class MainWidget(RelativeLayout):
             self.sound_begin.play()
         self.sound_music1.play()
         self.reset_game()
-        print("Pressed")
+        # print("Pressed")
         self.game_has_started_state = True
         self.menu_widget.opacity = 0
 
